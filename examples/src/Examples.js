@@ -20,7 +20,7 @@ export class Example1 extends React.Component {
         })
     }
 
-    _getProgress = (completedCount, total) => {
+    _onProgress = (completedCount, total) => {
         const percent = (Math.round(completedCount/total * 10000)/100).toFixed(2) + '%'
         console.log(percent)
     }
@@ -40,7 +40,7 @@ export class Example1 extends React.Component {
                 images={images}
                 onError={this._handleImageLoadError}
                 onSuccess={this._handleImageLoadSuccess}
-                getProgress={this._getProgress}
+                onProgress={this._onProgress}
                 mountChildren
                 resolveOnError
             >

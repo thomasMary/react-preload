@@ -21,8 +21,8 @@ const propTypes = {
     // Success callback
     onSuccess: PropTypes.func,
 
-    // getProgress
-    getProgress: PropTypes.func,
+    // onProgress
+    onProgress: PropTypes.func,
 
     // Whether or not we should still show the content
     // even if there is a preloading error
@@ -81,7 +81,7 @@ class Preload extends Component {
     }
 
     updateProgress = (completedCount) => {
-        this.props.getProgress(completedCount, this.props.images.length);
+        this.props.onProgress(completedCount, this.props.images.length);
     }
 
     _handleSuccess() {
