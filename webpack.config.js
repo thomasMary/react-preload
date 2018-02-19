@@ -4,7 +4,7 @@ var webpack = require('webpack');
 module.exports = [{
   devtool: 'eval',
   entry: {
-    'react-preload': './modules/index',
+    'react-preload': './lib/index',
     'examples': './examples/src/index',
   },
   output: {
